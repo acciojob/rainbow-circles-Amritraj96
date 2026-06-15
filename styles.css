@@ -1,52 +1,31 @@
-/*  your css code here. If applicable */
-/* Center everything in the body to make alignment easy */
-body {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #ffffff; /* Clean background to view the circles */
-}
-
-/* Ensure all divs are perfectly circular and centered */
+/* Style for all three nested circles */
 #outer, #middle, #inner {
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box; /* Crucial for keeping total width/height precise */
+    box-sizing: border-box; /* Keeps dimensions exactly as defined */
 }
 
-/* 1. Outer Circle (Total: 300px)
-  Border (Red): adds 25px on all sides -> expands 250px to 300px
-  Background (Orange): 250px
-*/
+/* 1. Outer Circle: Total 300px */
 #outer {
     width: 300px;
     height: 300px;
-    border: 25px solid #ff0000; 
-    background-color: #ffa500;
+    border: 25px solid #ff0000;       /* Red border */
+    background-color: #ffa500;       /* Orange background */
 }
 
-/* 2. Middle Circle (Total: 200px)
-  Border (Yellow): adds 25px on all sides -> expands 150px to 200px
-  Background (Green): 150px
-*/
+/* 2. Middle Circle: Total 200px (Centered inside outer using 25px margin) */
 #middle {
     width: 200px;
     height: 200px;
-    border: 25px solid #ffff00;
-    background-color: #008000;
+    margin: 25px;                    /* Required by the test */
+    border: 25px solid #ffff00;       /* Yellow border */
+    background-color: #008000;       /* Green background */
 }
 
-/* 3. Inner Circle (Total: 100px)
-  Border (Blue): adds 25px on all sides -> expands 50px to 100px
-  Background (Purple): 50px
-*/
+/* 3. Inner Circle: Total 100px (Centered inside middle using 25px margin) */
 #inner {
     width: 100px;
     height: 100px;
-    border: 25px solid #0000ff;
-    background-color: #800080;
+    margin: 25px;                    /* Required by the test */
+    border: 25px solid #0000ff;       /* Blue border */
+    background-color: #800080;       /* Purple background */
 }
